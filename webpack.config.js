@@ -1,18 +1,18 @@
 const webpack = require('webpack');
-const prod = process.argv.indexOf('-p') !== -1;
+const config = require('config')
 
 module.exports = {
   mode: "production",
 
   entry: "./src/App.js",
-  
+
+  resolve: {
+    alias: {
+      config: path.join(__dirname, 'config', process.env.NODE_ENV)
+    }
+  },
+
   plugins: [
-    new webpack.DefinePlugin({
-      process: {
-        env: {
-          NODE_ENV: prod ? `"production"` : '"development"'
-        }
-      }
-    })
+    new webpack.EnvironmentPlugin(['NODE_ENV'])
   ]
 };
