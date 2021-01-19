@@ -1,8 +1,3 @@
-const webpack = require('webpack');
-const config = require('config')
-
 module.exports = {
-  mode: "production",
-
-  
-};
+  mode: 'production'
+}
