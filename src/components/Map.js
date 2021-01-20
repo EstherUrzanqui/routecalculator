@@ -65,7 +65,7 @@ class Map extends React.Component {
 
   handleCalculator = () => {
     this.setState({
-      total: this.state.distance * this.state.select 
+      total: this.state.distance * this.state.select + '€'
     })
   }
 
