@@ -98,6 +98,7 @@ class Map extends React.Component {
               onChange={this.handleChange}
             >
               <option name="Choose your vehicle" value={0}>Choose your vehicle</option>
+              <option name="car" value={0.10}>Car</option>
               <option name="van" value={0.25}> Van </option>
               <option name="truck" value={0.50}> Truck </option>
             </Input>
